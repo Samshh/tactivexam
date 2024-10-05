@@ -1,0 +1,59 @@
+header {
+  .container {
+    @include flexbox();
+    width: 100%;
+  }
+}
+
+.booking {
+  &--form {
+    width: 100%;
+    height: auto;
+
+    &__icon {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      width: torem(66);
+      height: torem(66);
+      background: $light-grey;
+      border-radius: 50%;
+    }
+  }
+
+  &--nav {
+    background: $white;
+    @include flexbox();
+    @include justify-content(center);
+
+    &__item {
+      padding: $spacing-lg $spacing-xlg;
+      text-align: center;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+
+      label {
+        font-size: $small;
+        color: $black;
+        letter-spacing: -0.39px;
+        margin-bottom: 0;
+        margin-top: $spacing-xs;
+      }
+
+      &.active {
+        .booking--form__icon {
+          background: $primary-color;
+        }
+      }
+    }
+  }
+
+  &--content {
+    padding: $spacing-xlg;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: #f7f7f7;
+  }
+}
