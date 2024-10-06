@@ -2,58 +2,84 @@ header {
   .container {
     @include flexbox();
     width: 100%;
-  }
-}
 
-.booking {
-  &--form {
-    width: 100%;
-    height: auto;
-
-    &__icon {
-      @include flexbox();
-      @include align-items(center);
-      @include justify-content(center);
-      width: torem(66);
-      height: torem(66);
-      background: $light-grey;
-      border-radius: 50%;
+    .col-8 {
+      background-color: $white;
+      padding: 0;
     }
-  }
 
-  &--nav {
-    background: $white;
-    @include flexbox();
-    @include justify-content(center);
+    .booking {
+      &--form {
+        width: 100%;
+        height: auto;
 
-    &__item {
-      padding: $spacing-lg $spacing-xlg;
-      text-align: center;
-      @include flexbox();
-      @include flex-direction(column);
-      @include justify-content(center);
-      @include align-items(center);
-
-      label {
-        font-size: $small;
-        color: $black;
-        letter-spacing: -0.39px;
-        margin-bottom: 0;
-        margin-top: $spacing-xs;
+        &__icon {
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          width: torem(66);
+          height: torem(66);
+          background: $light-grey;
+          border-radius: 50%;
+        }
       }
 
-      &.active {
-        .booking--form__icon {
-          background: $primary-color;
+      &--separator {
+        width: 65%;
+        height: 0.35rem;
+        background: $light-grey;
+        position: absolute;
+        top: 40%;
+        left: 18%;
+        z-index: 1;
+      }
+
+      &--nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        position: relative;
+        padding: $spacing-lg $spacing-xlg;
+
+        &__item {
+          text-align: center;
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content(center);
+          @include align-items(center);
+          z-index: 2;
+
+          label {
+            font-size: $small;
+            color: $black;
+            letter-spacing: -0.39px;
+            margin-bottom: 0;
+            margin-top: $spacing-xs;
+          }
+
+          &.active {
+            .booking--form__icon {
+              background: $primary-color;
+            }
+          }
+        }
+      }
+
+      &--content {
+        padding: $spacing-xlg;
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.3
+        );
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+        .container {
+          @include flexbox();
         }
       }
     }
-  }
-
-  &--content {
-    padding: $spacing-xlg;
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
-    background-color: #f7f7f7;
   }
 }
