@@ -9965,31 +9965,62 @@ a {
   position: absolute;
   bottom: 0;
 }
-.header h1 {
-  text-align: center;
+.header .title {
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+.header .title h1 {
+  text-align: start;
   margin: 0 auto;
   color: #ffffff;
   font-family: Poppins Bold;
   position: relative;
 }
-.header h1:after {
-  content: "";
-  width: 11px;
-  height: 11px;
-  margin: 64px 0 25px;
+.header .title h1 .square-period {
+  display: inline-block;
+  width: 0.17em;
+  height: 0.17em;
   background-color: #fdbe13;
-  display: block;
-  position: absolute;
-  right: -1.25rem;
-  bottom: 0;
+  border-radius: 0;
+  margin-left: 3px;
+}
+.header .title .subtitle--inner {
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+.header .title .subtitle p {
+  color: #fdbe13;
+  font-weight: 600;
 }
 
 header .container {
   display: flex;
   width: 100%;
 }
+header .container .row {
+  display: flex;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  gap: 1rem;
+}
 header .container .col-8 {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 0;
 }
 header .container .booking--form {
@@ -10024,6 +10055,7 @@ header .container .booking--nav {
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   padding: 1.25rem 1.875rem;
+  background-color: #ffffff;
 }
 header .container .booking--nav__item {
   text-align: center;
@@ -10050,12 +10082,16 @@ header .container .booking--nav__item.active .booking--form__icon {
   background: #fdbe13;
 }
 header .container .booking--content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
   padding: 1.875rem;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 header .container .booking--content .container {
   display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: #ededed;
+  font-weight: 100;
 }/*# sourceMappingURL=style.css.map */

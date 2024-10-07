@@ -3,8 +3,20 @@ header {
     @include flexbox();
     width: 100%;
 
+    .row {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(nowrap);
+      @include justify-content(center);
+      @include align-items(center);
+      gap: 1rem;
+    }
+
     .col-8 {
-      background-color: $white;
+      background-color: rgba(255, 255, 255, 0.15);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 0;
     }
 
@@ -39,6 +51,7 @@ header {
         grid-template-columns: repeat(4, 1fr);
         position: relative;
         padding: $spacing-lg $spacing-xlg;
+        background-color: $white;
 
         &__item {
           text-align: center;
@@ -65,19 +78,17 @@ header {
       }
 
       &--content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacing-lg;
         padding: $spacing-xlg;
-        -webkit-backdrop-filter: blur(30px);
-        backdrop-filter: blur(30px);
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.3
-        );
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 
         .container {
           @include flexbox();
+          @include flex-direction(column);
+          gap: $spacing-lg;
+          color: $light-grey;
+          font-weight: 100;
         }
       }
     }

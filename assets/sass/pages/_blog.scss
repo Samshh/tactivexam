@@ -41,23 +41,36 @@
     }
   }
 
-  h1 {
-    text-align: center;
-    margin: 0 auto;
-    color: $white;
-    font-family: $pop-bld;
-    position: relative;
+  .title {
+    @include flexbox();
+    @include flex-direction(column);
+    gap: $spacing-xlg;
+    h1 {
+      text-align: start;
+      margin: 0 auto;
+      color: $white;
+      font-family: $pop-bld;
+      position: relative;
 
-    &:after {
-      content: "";
-      width: 11px;
-      height: 11px;
-      margin: 64px 0 25px;
-      background-color: $primary-color;
-      display: block;
-      position: absolute;
-      right: torem(-20);
-      bottom: 0;
+      .square-period {
+        display: inline-block;
+        width: 0.17em;
+        height: 0.17em;
+        background-color: $primary-color;
+        border-radius: 0;
+        margin-left: 3px;
+      }
+    }
+    .subtitle {
+      &--inner {
+        @include flexbox();
+        @include align-items(center);
+        gap: $spacing-lg;
+      }
+      p {
+        color: $primary-color;
+        font-weight: 600;
+      }
     }
   }
 }
