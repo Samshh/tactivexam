@@ -9372,6 +9372,10 @@ a.text-accent:hover, a.text-accent:focus {
 /* CONVERT: PX TO REM;
  * @desc : converts PX values to REM;
  */
+body {
+  font-family: "Poppins Regular", sans-serif;
+}
+
 @font-face {
   font-family: "AhoyAmigo-DEMO";
   src: url(../fonts/ahoy_amigo/AhoyAmigo-DEMO.ttf);
@@ -9977,11 +9981,12 @@ a {
   color: #ffffff;
   font-family: Poppins Bold;
   position: relative;
+  line-height: 1;
 }
 .header .title h1 .square-period {
   display: inline-block;
-  width: 0.17em;
-  height: 0.17em;
+  width: 0.18em;
+  height: 0.18em;
   background-color: #fdbe13;
   border-radius: 0;
   margin-left: 3px;
@@ -9991,22 +9996,41 @@ a {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.9375rem;
 }
 .header .title .subtitle p {
   color: #fdbe13;
   font-weight: 600;
 }
 
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)), url("../../../assets/images/booking-header@3x.png");
+  background-size: cover;
+}
+header .form-control {
+  padding: 1.5rem 0.9375rem !important;
+}
 header .container {
   display: flex;
   width: 100%;
+}
+header .container #special-input {
+  padding: 0.3125rem 1.875rem;
+  flex-grow: 1;
+}
+header .container #special-button {
+  background-color: #fdbe13;
+  border-color: #fdbe13;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3125rem 1.875rem;
 }
 header .container .row {
   display: flex;
   -moz-flex-direction: row;
   flex-direction: row;
-  flex-wrap: nowrap;
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
@@ -10016,16 +10040,25 @@ header .container .row {
   align-items: center;
   gap: 1rem;
 }
-header .container .col-8 {
+header .container .col {
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.875rem;
+}
+header .container .booking {
+  width: 100%;
+}
+header .container .booking--form {
+  width: 100%;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.15);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 0;
-}
-header .container .booking--form {
   width: 100%;
-  height: auto;
 }
 header .container .booking--form__icon {
   display: flex;
@@ -10040,6 +10073,72 @@ header .container .booking--form__icon {
   height: 4.125rem;
   background: #ededed;
   border-radius: 50%;
+}
+header .container .booking--button__container {
+  display: flex;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.875rem;
+  width: 100%;
+}
+header .container .booking--button__container .balancer {
+  opacity: 0;
+}
+header .container .booking--next {
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  gap: 1.25rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  color: #fdbe13;
+}
+header .container .booking--button {
+  background-color: #fdbe13;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3125rem 1.875rem;
+  width: 45%;
+  font-weight: 600;
+  text-align: center;
+}
+header .container .booking--button .special {
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  padding: 0.3125rem 0.3125rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 2.5rem;
+  background-color: rgba(129, 129, 129, 0.3);
+  margin-left: 0.3125rem;
+}
+header .container .booking--button span {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-right: 0.3125rem;
 }
 header .container .booking--separator {
   width: 65%;
@@ -10094,4 +10193,53 @@ header .container .booking--content .container {
   gap: 1.25rem;
   color: #ededed;
   font-weight: 100;
+}
+
+footer .container {
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+footer .container #thisrow {
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  gap: 1.25rem;
+}
+footer .container #thisrow #thiscol {
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  gap: 0.3125rem;
+}
+footer .container #thisrow #thiscol p {
+  font-size: 0.875rem;
+}
+footer .container .logos {
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  color: #ffffff;
+  width: 100%;
+  padding: 0;
+  gap: 1.25rem;
+}
+footer .container .footer--image {
+  width: 100%;
+  max-width: 200px;
+}
+footer .col-5 {
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

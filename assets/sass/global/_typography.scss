@@ -2,6 +2,10 @@
 //     moz-osx-font-smoothing: grayscale;
 //     font: normal normal 16px/150% 'Lato-Regular', 'Helvetica', sans-serif;
 
+body {
+  font-family: "Poppins Regular", sans-serif;
+}
+
 @font-face {
   font-family: "AhoyAmigo-DEMO";
   src: url(../fonts/ahoy_amigo/AhoyAmigo-DEMO.ttf);

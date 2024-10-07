@@ -1,29 +1,56 @@
 header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 05)),
+    url("../../../assets/images/booking-header@3x.png");
+  background-size: cover;
+
+  .form-control {
+    padding: 1.5rem $spacing-md !important;
+  }
+
   .container {
     @include flexbox();
     width: 100%;
 
+    #special-input {
+      padding: $spacing-xs $spacing-xlg;
+      flex-grow: 1;
+    }
+
+    #special-button {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: $spacing-xs $spacing-xlg;
+    }
+
     .row {
       @include flexbox();
       @include flex-direction(row);
-      @include flex-wrap(nowrap);
       @include justify-content(center);
       @include align-items(center);
       gap: 1rem;
     }
-
-    .col-8 {
-      background-color: rgba(255, 255, 255, 0.15);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 0;
+    .col {
+      @include flexbox();
+      @include flex-direction(column);
+      width: 100%;
+      gap: $spacing-xlg;
     }
 
     .booking {
+      width: 100%;
       &--form {
         width: 100%;
         height: auto;
+        background-color: rgba(255, 255, 255, 0.15);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 0;
+        width: 100%;
 
         &__icon {
           @include flexbox();
@@ -33,6 +60,65 @@ header {
           height: torem(66);
           background: $light-grey;
           border-radius: 50%;
+        }
+      }
+
+      &--button {
+        &__container {
+          @include flexbox();
+          @include justify-content(space-between);
+          @include align-items(center);
+          gap: $spacing-lg;
+          padding: $spacing-lg $spacing-xlg;
+          width: 100%;
+
+          .balancer {
+            opacity: 0;
+          }
+        }
+      }
+
+      &--next {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        gap: $spacing-lg;
+        text-decoration: none;
+        background: none;
+        border: none;
+        color: $primary-color;
+      }
+
+      &--button {
+        background-color: $primary-color;
+        border: none;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: $spacing-xs $spacing-xlg;
+        width: 45%;
+        font-weight: 600;
+        text-align: center;
+
+        .special {
+          font-style: normal;
+          font-weight: 400;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          padding: $spacing-xs $spacing-xs;
+          height: 1.5rem;
+          width: 1.5rem;
+          border-radius: 2.5rem;
+          background-color: rgba($color: $dark-grey, $alpha: 0.3);
+          margin-left: $spacing-xs;
+        }
+
+        span {
+          font-size: 1.7rem;
+          font-weight: 400;
+          margin-right: $spacing-xs;
         }
       }
 
@@ -92,5 +178,48 @@ header {
         }
       }
     }
+  }
+}
+
+footer {
+  .container {
+    @include flexbox();
+    @include flex-direction(column);
+    gap: $spacing-xlg;
+
+    #thisrow {
+      @include justify-content(space-between);
+      gap: $spacing-lg;
+
+      #thiscol {
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        gap: $spacing-xs;
+        p {
+          font-size: $small;
+        }
+      }
+    }
+
+    .logos {
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      color: $white;
+      width: 100%;
+      padding: 0;
+      gap: $spacing-lg;
+    }
+
+    .footer--image {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+
+  .col-5 {
+    @include flexbox();
+    @include flex-direction(column);
   }
 }
