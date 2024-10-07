@@ -28,7 +28,7 @@
       <div class="container-fluid justify-content-between">
         <a href="#" class="menu--link">
           <span class="humberger"></span>
-          Menu
+          <p>Menu</p>
         </a>
         <div class="social-icon">
           <a href="">
@@ -48,15 +48,10 @@
     <main>
       <header
         class="header header--lg header--brushed d-flex align-items-center"
-        style="
-          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url('assets/images/booking-header@3x.png');
-          background-size: cover;
-        "
       >
         <div class="container">
           <div class="row">
-            <div class="col-8">
+            <div class="col">
               <div class="booking--form">
                 <form>
                   <div
@@ -199,7 +194,35 @@
                       </div>
                     </div>
                   </div>
+                  <div class="booking--button__container">
+                    <div class="balancer">
+                      balancer
+                    </div>
+                    <button type="button" class="booking--button">
+                      <span>+</span>Add another flight
+                      <div class="special">2</div>
+                    </button>
+                    <button type="button" class="booking--next">
+                      <p>Next</p><i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
                 </form>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    id="special-input"
+                    name="contact"
+                    type="text"
+                    class="form-control"
+                    placeholder="I would like to speak to someone about my flight"
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="special-button">
+                      <div type="button" class="button">Contact</div>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -218,43 +241,50 @@
         </div>
       </header>
     </main>
-
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-md-5 row align-items-center">
-            <div class="col-md-5"></div>
-            <div class="col-md-7"></div>
+        <div class="row" id="thisrow">
+          <div class="col-md-5 row align-items-center logos">
+            <img
+              class="footer--image"
+              src="/assets/images/Logo.svg"
+              alt="Riverview Farm"
+              type="image/svg+xml"
+            />
+            <div id="thiscol">
+              <p>in association and compliance with</p>
+              <img
+                class="footer--image"
+                src="/assets/images/asra-logo-white@3x.png"
+                alt="Asra"
+                type="png"
+              />
+            </div>
           </div>
-          <div class="col-md-7 row justify-content-between pl-5 ml-4">
+          <div class="col-md-7 row justify-content-between">
             <div class="col-5 text-white text-uppercase font-weight-bld">
               <ul class="list-unstyled">
                 <li>
-                  <p class="small mb-1">Sample Address</p>
+                  <p class="text-white small">Mitchell hwy</p>
                 </li>
                 <li>
-                  <p class="small mb-1">Bourke NSW 2840</p>
+                  <a href="" class="text-white small">Bourke Nsw 2840</a>
                 </li>
                 <li>
-                  <a
-                    href="mailto:rosscow40@gmail.com"
-                    class="d-block text-white small"
+                  <a href="mailto:rosscow40@gmail.com" class="text-white small"
                     >e: rosscow40@gmail.com</a
                   >
                 </li>
                 <li>
-                  <a href="" class="text-white small">Bourke Stays</a>
-                </li>
-                <li>
-                  <a href="tel:0414 645 271" class="d-block text-white small"
+                  <a href="tel:0414 645 271" class="text-white small"
                     >t: 0414 786 312</a
                   >
                 </li>
               </ul>
             </div>
             <div class="col-4 text-uppercase font-weight-bld">
-              <small class="text-primary">Our Company</small>
               <ul class="list-unstyled">
+                <li class="text-primary small">Our Company</li>
                 <li>
                   <a href="" class="text-white small">Home</a>
                 </li>
@@ -273,8 +303,8 @@
               </ul>
             </div>
             <div class="col-3 text-uppercase font-weight-bld">
-              <small class="text-primary">Get in touch</small>
               <ul class="list-unstyled">
+                <li class="text-primary small">Get in touch</li>
                 <li>
                   <a href="" class="text-white small">Contact us</a>
                 </li>
@@ -287,7 +317,7 @@
         </div>
         <div class="footer--copyright">
           <p class="small font-weight-bld text-uppercase">
-            Copyright © 2021 Farm. all rights reserved
+            Copyright © 2021 Riverview Farm. all rights reserved
           </p>
           <div class="footer--social">
             <a href="">
@@ -304,7 +334,6 @@
         </div>
       </div>
     </footer>
-
     <!-- SCRIPTS -->
     <script
       type="text/javascript"
