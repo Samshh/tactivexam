@@ -1,19 +1,52 @@
+nav {
+  @include no-select();
+}
+
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 05)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../../assets/images/booking-header@3x.png");
   background-size: cover;
+  @include no-select();
 
   .form-control {
-    padding: 1.5rem $spacing-md !important;
+    height: 3rem;
   }
 
   .container {
     @include flexbox();
     width: 100%;
+    height: auto;
 
-    #special-input {
-      padding: $spacing-xs $spacing-xlg;
-      flex-grow: 1;
+    #form-container {
+      @include flexbox();
+      @include justify-content(start);
+      @include align-items(center);
+      @include flex-direction(column);
+      max-height: 320px;
+      overflow-y: scroll;
+
+      .input-group {
+        .input-group-append {
+          .input-group-text {
+            background-color: $white;
+            border: none;
+
+            i {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    #removeButtonContainer2, #removeButtonContainer3 {
+      @include flexbox();
+      @include justify-content(space-between);
+
+      .booking--next {
+        margin-bottom: 8px;
+        padding: 0;
+      }
     }
 
     #special-button {
@@ -41,6 +74,7 @@ header {
     }
 
     .booking {
+      z-index: 99;
       width: 100%;
       &--form {
         width: 100%;
@@ -167,7 +201,8 @@ header {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $spacing-lg;
-        padding: $spacing-xlg;
+        padding: $spacing-md $spacing-xlg;
+        width: 100%;
 
         .container {
           @include flexbox();
@@ -206,6 +241,7 @@ footer {
       @include flexbox();
       @include align-items(center);
       @include justify-content(center);
+      @include no-select();
       color: $white;
       width: 100%;
       padding: 0;
@@ -221,5 +257,9 @@ footer {
   .col-5 {
     @include flexbox();
     @include flex-direction(column);
+  }
+
+  .col-4, .col-3 {
+    @include no-select();
   }
 }

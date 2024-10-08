@@ -6,7 +6,7 @@
     <!-- FONTS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <!-- PLUGINS -->
     <link
@@ -127,83 +127,276 @@
                   </div>
 
                   <!-- Booking Form Content -->
-                  <div class="booking--content tab-content" id="bookingContent">
-                    <div class="container">
-                      <!-- Date Input -->
-                      <div class="form-group">
-                        <label for="date">Date</label>
-                        <div class="input-group">
-                          <input
-                            id="date"
-                            name="date"
-                            type="date"
-                            class="form-control"
-                            aria-label="Select date"
-                          />
+                  <div id="form-container">
+                    <div
+                      class="booking--content tab-content"
+                      id="bookingContent1"
+                    >
+                      <div class="container">
+                        <!-- Date Input -->
+                        <div class="form-group">
+                          <label for="date1">Date</label>
+                          <div class="input-group">
+                            <input
+                              id="date1"
+                              name="date1"
+                              type="date"
+                              class="form-control"
+                              aria-label="Select date"
+                            />
+                          </div>
+                        </div>
+                        <!-- Flight Duration Input -->
+                        <div class="form-group">
+                          <label for="flightDuration1">Flight Duration</label>
+                          <div class="input-group">
+                            <select
+                              id="flightDuration1"
+                              name="flightDuration1"
+                              class="form-control"
+                              aria-label="Flight duration in hours"
+                            >
+                              <option value="0.5">30 minutes</option>
+                              <option value="1">1 hour</option>
+                            </select>
+                            <div class="input-group-append">
+                              <div class="input-group-text">
+                                <i class="fa-regular fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <!-- Flight Duration Input -->
-                      <div class="form-group">
-                        <label for="flightDuration">Flight Duration</label>
-                        <div class="input-group">
-                          <select
-                            id="flightDuration"
-                            name="flightDuration"
-                            class="form-control"
-                            aria-label="Flight duration in hours"
-                          >
-                            <option value="0.5">30 minutes</option>
-                            <option value="1">1 hour</option>
-                          </select>
+                      <div class="container">
+                        <!-- Time Dropdown -->
+                        <div class="form-group">
+                          <label for="time1">Time</label>
+                          <div class="input-group">
+                            <select
+                              id="time1"
+                              name="time1"
+                              class="form-control time-dropdown"
+                              aria-label="Select time"
+                            >
+                              <option value="11:00 AM">11:00 AM AST</option>
+                              <option value="12:00 PM">12:00 NN AST</option>
+                              <option value="1:00 PM">1:00 PM AST</option>
+                              <option value="2:00 PM">2:00 PM AST</option>
+                              <option value="3:00 PM">3:00 PM AST</option>
+                              <option value="4:00 PM">4:00 PM AST</option>
+                            </select>
+                            <div class="input-group-append">
+                              <div class="input-group-text">
+                                <i class="fa-regular fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Age Input -->
+                        <div class="form-group">
+                          <label for="age1">Age</label>
+                          <div class="input-group">
+                            <input
+                              id="age1"
+                              name="age1"
+                              type="number"
+                              min="0"
+                              class="form-control"
+                              aria-label="Enter age"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="container">
-                      <!-- Time Dropdown -->
-                      <div class="form-group">
-                        <label for="time">Time</label>
-                        <div class="input-group">
-                          <select
-                            id="time"
-                            name="time"
-                            class="form-control time-dropdown"
-                            aria-label="Select time"
-                          >
-                            <option value="11:00 AM">11:00 AM AST</option>
-                            <option value="12:00 PM">12:00 NN AST</option>
-                            <option value="1:00 PM">1:00 PM AST</option>
-                            <option value="2:00 PM">2:00 PM AST</option>
-                            <option value="3:00 PM">3:00 PM AST</option>
-                            <option value="4:00 PM">4:00 PM AST</option>
-                          </select>
+
+                    <div
+                      class="booking--content tab-content"
+                      id="bookingContent2"
+                      style="display: none"
+                    >
+                      <div class="container">
+                        <!-- Date Input -->
+                        <div class="form-group">
+                          <label for="date2">Date</label>
+                          <div class="input-group">
+                            <input
+                              id="date2"
+                              name="date2"
+                              type="date"
+                              class="form-control"
+                              aria-label="Select date"
+                            />
+                          </div>
+                        </div>
+                        <!-- Flight Duration Input -->
+                        <div class="form-group">
+                          <label for="flightDuration2">Flight Duration</label>
+                          <div class="input-group">
+                            <select
+                              id="flightDuration2"
+                              name="flightDuration2"
+                              class="form-control"
+                              aria-label="Flight duration in hours"
+                            >
+                              <option value="0.5">30 minutes</option>
+                              <option value="1">1 hour</option>
+                            </select>
+                            <div class="input-group-append">
+                              <div class="input-group-text">
+                                <i class="fa-regular fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <!-- Age Input -->
-                      <div class="form-group">
-                        <label for="age">Age</label>
-                        <div class="input-group">
-                          <input
-                            id="age"
-                            name="age"
-                            type="number"
-                            min="0"
-                            class="form-control"
-                            aria-label="Enter age"
-                          />
+                      <div class="container">
+                        <!-- Time Dropdown -->
+                        <div class="form-group">
+                          <div id="removeButtonContainer2">
+                            <label for="time2">Time</label>
+                            <button type="button" class="booking--next">
+                              Remove flight
+                            </button>
+                          </div>
+                          <div class="input-group">
+                            <select
+                              id="time2"
+                              name="time2"
+                              class="form-control time-dropdown"
+                              aria-label="Select time"
+                            >
+                              <option value="11:00 AM">11:00 AM AST</option>
+                              <option value="12:00 PM">12:00 NN AST</option>
+                              <option value="1:00 PM">1:00 PM AST</option>
+                              <option value="2:00 PM">2:00 PM AST</option>
+                              <option value="3:00 PM">3:00 PM AST</option>
+                              <option value="4:00 PM">4:00 PM AST</option>
+                            </select>
+                            <div class="input-group-append">
+                              <div class="input-group-text">
+                                <i class="fa-regular fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Age Input -->
+                        <div class="form-group">
+                          <label for="age2">Age</label>
+                          <div class="input-group">
+                            <input
+                              id="age2"
+                              name="age2"
+                              type="number"
+                              min="0"
+                              class="form-control"
+                              aria-label="Enter age"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="booking--content tab-content"
+                      id="bookingContent3"
+                      style="display: none"
+                    >
+                      <div class="container">
+                        <!-- Date Input -->
+                        <div class="form-group">
+                          <label for="date3">Date</label>
+                          <div class="input-group">
+                            <input
+                              id="date3"
+                              name="date3"
+                              type="date"
+                              class="form-control"
+                              aria-label="Select date"
+                            />
+                          </div>
+                        </div>
+                        <!-- Flight Duration Input -->
+                        <div class="form-group">
+                          <label for="flightDuration3">Flight Duration</label>
+                          <div class="input-group">
+                            <select
+                              id="flightDuration3"
+                              name="flightDuration3"
+                              class="form-control"
+                              aria-label="Flight duration in hours"
+                            >
+                              <option value="0.5">30 minutes</option>
+                              <option value="1">1 hour</option>
+                            </select>
+                            <div class="input-group-append">
+                              <div class="input-group-text">
+                                <i class="fa-regular fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <!-- Time Dropdown -->
+                        <div class="form-group">
+                          <div id="removeButtonContainer3">
+                            <label for="time3">Time</label>
+                            <button type="button" class="booking--next">
+                              Remove flight
+                            </button>
+                          </div>
+                          <div class="input-group">
+                            <select
+                              id="time3"
+                              name="time3"
+                              class="form-control time-dropdown"
+                              aria-label="Select time"
+                            >
+                              <option value="11:00 AM">11:00 AM AST</option>
+                              <option value="12:00 PM">12:00 NN AST</option>
+                              <option value="1:00 PM">1:00 PM AST</option>
+                              <option value="2:00 PM">2:00 PM AST</option>
+                              <option value="3:00 PM">3:00 PM AST</option>
+                              <option value="4:00 PM">4:00 PM AST</option>
+                            </select>
+                            <div class="input-group-append">
+                              <div class="input-group-text">
+                                <i class="fa-regular fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Age Input -->
+                        <div class="form-group">
+                          <label for="age3">Age</label>
+                          <div class="input-group">
+                            <input
+                              id="age3"
+                              name="age3"
+                              type="number"
+                              min="0"
+                              class="form-control"
+                              aria-label="Enter age"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="booking--button__container">
-                    <div class="balancer">
-                      balancer
-                    </div>
-                    <button type="button" class="booking--button">
+                    <div class="balancer">balancer</div>
+                    <button
+                      type="button"
+                      class="booking--button"
+                      id="addFlightButton"
+                      onclick="addFlight()"
+                    >
                       <span>+</span>Add another flight
-                      <div class="special">2</div>
+                      <div class="special" id="flightCounter">2</div>
                     </button>
                     <button type="button" class="booking--next">
-                      <p>Next</p><i class="fas fa-arrow-right"></i>
+                      <p>Next</p>
+                      <i class="fas fa-arrow-right"></i>
                     </button>
                   </div>
                 </form>
@@ -335,6 +528,7 @@
       </div>
     </footer>
     <!-- SCRIPTS -->
+    <script type="text/javascript" src="main.js"></script>
     <script
       type="text/javascript"
       src="assets/node_modules/jquery/dist/jquery.min.js"

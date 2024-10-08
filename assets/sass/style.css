@@ -10003,20 +10003,58 @@ a {
   font-weight: 600;
 }
 
+nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0)), url("../../../assets/images/booking-header@3x.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/images/booking-header@3x.png");
   background-size: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 header .form-control {
-  padding: 1.5rem 0.9375rem !important;
+  height: 3rem;
 }
 header .container {
   display: flex;
   width: 100%;
+  height: auto;
 }
-header .container #special-input {
-  padding: 0.3125rem 1.875rem;
-  flex-grow: 1;
+header .container #form-container {
+  display: flex;
+  -moz-justify-content: start;
+  -ms-justify-content: start;
+  justify-content: start;
+  -ms-flex-pack: start;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  max-height: 320px;
+  overflow-y: scroll;
+}
+header .container #form-container .input-group .input-group-append .input-group-text {
+  background-color: #ffffff;
+  border: none;
+}
+header .container #form-container .input-group .input-group-append .input-group-text i {
+  color: #fdbe13;
+}
+header .container #removeButtonContainer2, header .container #removeButtonContainer3 {
+  display: flex;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+header .container #removeButtonContainer2 .booking--next, header .container #removeButtonContainer3 .booking--next {
+  margin-bottom: 8px;
+  padding: 0;
 }
 header .container #special-button {
   background-color: #fdbe13;
@@ -10048,6 +10086,7 @@ header .container .col {
   gap: 1.875rem;
 }
 header .container .booking {
+  z-index: 99;
   width: 100%;
 }
 header .container .booking--form {
@@ -10184,7 +10223,8 @@ header .container .booking--content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  padding: 1.875rem;
+  padding: 0.9375rem 1.875rem;
+  width: 100%;
 }
 header .container .booking--content .container {
   display: flex;
@@ -10229,6 +10269,9 @@ footer .container .logos {
   -ms-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   color: #ffffff;
   width: 100%;
   padding: 0;
@@ -10242,4 +10285,9 @@ footer .col-5 {
   display: flex;
   -moz-flex-direction: column;
   flex-direction: column;
+}
+footer .col-4, footer .col-3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }/*# sourceMappingURL=style.css.map */

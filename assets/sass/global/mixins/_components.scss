@@ -11,6 +11,12 @@
   }
 }
 
+@mixin no-select() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 /* BOX SHADOW
  * @desc : sets styling for box-shadows;
  */
