@@ -23,7 +23,7 @@ header {
       @include align-items(center);
       @include flex-direction(column);
       max-height: 320px;
-      overflow-y: scroll;
+      overflow-y: auto;
 
       #bookingContent1 {
         margin-top: $spacing-xlg;

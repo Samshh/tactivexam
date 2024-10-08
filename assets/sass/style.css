@@ -10036,7 +10036,7 @@ header .container #form-container {
   -moz-flex-direction: column;
   flex-direction: column;
   max-height: 320px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 header .container #form-container #bookingContent1 {
   margin-top: 1.875rem;
