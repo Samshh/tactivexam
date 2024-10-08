@@ -10038,21 +10038,33 @@ header .container #form-container {
   max-height: 320px;
   overflow-y: scroll;
 }
+header .container #form-container #bookingContent1 {
+  margin-top: 1.875rem;
+}
+header .container #form-container .input-group input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(65%) sepia(100%) saturate(500%) hue-rotate(1deg) brightness(100%) contrast(101%);
+}
+header .container #form-container .input-group .formatted-date {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
 header .container #form-container .input-group .input-group-append .input-group-text {
   background-color: #ffffff;
-  border: none;
 }
 header .container #form-container .input-group .input-group-append .input-group-text i {
   color: #fdbe13;
 }
-header .container #removeButtonContainer2, header .container #removeButtonContainer3 {
+header .container #removeButtonContainer2,
+header .container #removeButtonContainer3 {
   display: flex;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
 }
-header .container #removeButtonContainer2 .booking--next, header .container #removeButtonContainer3 .booking--next {
+header .container #removeButtonContainer2 .booking--next,
+header .container #removeButtonContainer3 .booking--next {
   margin-bottom: 8px;
   padding: 0;
 }
@@ -10063,7 +10075,11 @@ header .container #special-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3125rem 1.875rem;
+  padding: 0.9375rem 1.875rem;
+}
+header .container #special-input {
+  height: 100%;
+  padding: 0.9375rem 1.875rem;
 }
 header .container .row {
   display: flex;
@@ -10223,7 +10239,7 @@ header .container .booking--content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
-  padding: 0.9375rem 1.875rem;
+  padding: 0.625rem 1.875rem;
   width: 100%;
 }
 header .container .booking--content .container {
@@ -10286,7 +10302,8 @@ footer .col-5 {
   -moz-flex-direction: column;
   flex-direction: column;
 }
-footer .col-4, footer .col-3 {
+footer .col-4,
+footer .col-3 {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;

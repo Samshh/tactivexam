@@ -36,6 +36,10 @@ function removeFlight(flightId) {
     if (maxFlights < 2) {
       addFlightButton.style.display = "flex";
     }
+
+    if (maxFlights === 2) {
+      flightCounter.style.display = "flex";
+    }
   }
 }
 
@@ -50,3 +54,15 @@ document
   .addEventListener("click", function () {
     removeFlight("bookingContent3");
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dateInputs = ["date1", "date2", "date3"];
+  const today = new Date().toISOString().split("T")[0];
+
+  dateInputs.forEach(id => {
+    const dateInput = document.getElementById(id);
+    if (dateInput) {
+      dateInput.setAttribute("min", today);
+    }
+  });
+});

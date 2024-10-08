@@ -25,11 +25,25 @@ header {
       max-height: 320px;
       overflow-y: scroll;
 
+      #bookingContent1 {
+        margin-top: $spacing-xlg;
+      }
+
       .input-group {
+        input[type="date"]::-webkit-calendar-picker-indicator {
+          filter: invert(65%) sepia(100%) saturate(500%) hue-rotate(1deg)
+            brightness(100%) contrast(101%);
+        }
+
+        .formatted-date {
+          margin-top: 10px;
+          font-size: 1rem;
+          color: #333;
+        }
+
         .input-group-append {
           .input-group-text {
             background-color: $white;
-            border: none;
 
             i {
               color: $primary-color;
@@ -39,7 +53,8 @@ header {
       }
     }
 
-    #removeButtonContainer2, #removeButtonContainer3 {
+    #removeButtonContainer2,
+    #removeButtonContainer3 {
       @include flexbox();
       @include justify-content(space-between);
 
@@ -56,7 +71,12 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: $spacing-xs $spacing-xlg;
+      padding: $spacing-md $spacing-xlg;
+    }
+
+    #special-input {
+      height: 100%;
+      padding: $spacing-md $spacing-xlg;
     }
 
     .row {
@@ -201,7 +221,7 @@ header {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $spacing-lg;
-        padding: $spacing-md $spacing-xlg;
+        padding: $spacing-sm $spacing-xlg;
         width: 100%;
 
         .container {
@@ -259,7 +279,8 @@ footer {
     @include flex-direction(column);
   }
 
-  .col-4, .col-3 {
+  .col-4,
+  .col-3 {
     @include no-select();
   }
 }
